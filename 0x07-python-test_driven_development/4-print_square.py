@@ -1,18 +1,25 @@
 #!/usr/bin/python3
-"""
-Module 4-print_square
-Contain one method that the size must be integer and greater than zero
-Print square with the character #
-"""
+"""Module for print_square method."""
+
 
 def print_square(size):
-    """Print square with character #"""
-    if type(size) is not int:
+    """Method for printing a square with # characters.
+
+    Args:
+        size: The int size of the square's side.
+
+    Raises:
+        TypeError: If size is not an int.
+        ValueError: If size is < 0.
+    """
+    if not isinstance(size, int):
         raise TypeError("size must be an integer")
-    elif size < 0:
+
+    if size < 0:
         raise ValueError("size must be >= 0")
-    elif type(size) is float and size < 0:
-        raise TypeError("size must be an integer")
-    else:
-        message = "\n".join(|"#" * size for i in range(size)])
-        print(message)
+
+    print((("#" * size + "\n") * size), end="")
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/4-print_square.txt")
