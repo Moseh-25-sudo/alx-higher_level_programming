@@ -3,7 +3,6 @@
 Reads from standard input and computes metrics
 """
 
-
 if __name__ == "__main__":
     import sys
 
@@ -49,3 +48,4 @@ if __name__ == "__main__":
         for i in sorted(st):
             print("{}: {}".format(i, st[i]))
         raise
+
