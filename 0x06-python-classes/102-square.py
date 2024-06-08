@@ -38,4 +38,4 @@ class Square:
         return self.area() > other.area()
 
     def __ge__(self, other):
-        return self.area() >= othe
+        return self.area() >= othe.area()
