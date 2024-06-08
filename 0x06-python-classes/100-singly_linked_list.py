@@ -36,11 +36,12 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 class SinglyLinkedList:
     """Represent a singly-linked list."""
 
     def __init__(self):
-        """Initalize a new SinglyLinkedList."""
+        """Initialize a new SinglyLinkedList."""
         self.__head = None
 
     def sorted_insert(self, value):
@@ -73,4 +74,3 @@ class SinglyLinkedList:
             values.append(str(tmp.data))
             tmp = tmp.next_node
         return ('\n'.join(values))
-
